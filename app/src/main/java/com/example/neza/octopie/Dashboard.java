@@ -3,6 +3,7 @@ package com.example.neza.octopie;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
+import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
@@ -10,11 +11,10 @@ import android.view.MenuItem;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import info.androidhive.bottomnavigation.fragment.CartFragment;
-import info.androidhive.bottomnavigation.fragment.GiftsFragment;
-import info.androidhive.bottomnavigation.fragment.ProfileFragment;
-import info.androidhive.bottomnavigation.fragment.StoreFragment;
-import info.androidhive.bottomnavigation.helper.BottomNavigationBehavior;
+import com.example.neza.octopie.Dashboard;
+import com.example.neza.octopie.Recipes;
+import com.example.neza.octopie.Statistics;
+import com.example.neza.octopie.ShoppingList;
 
 
 public class Dashboard extends AppCompatActivity {
@@ -33,16 +33,16 @@ public class Dashboard extends AppCompatActivity {
 
         ImageView myImageView = (ImageView) findViewById(R.id.profile_octo);
         TextView profile = (TextView) findViewById(R.id.profile_text);
-        if (String.valueOf(lala).equals(0)) {
+        if (lala == 0) {
             myImageView.setImageResource(R.drawable.octo01);
             profile.setText("Normal");
-        } else if (String.valueOf(lala).equals(1)) {
+        } else if (lala == 1) {
             myImageView.setImageResource(R.drawable.octo02);
             profile.setText("Fit");
-        } else if (String.valueOf(lala).equals(2)) {
+        } else if (lala == 2) {
             myImageView.setImageResource(R.drawable.octo03);
             profile.setText("Vegan");
-        } else if (String.valueOf(lala).equals(3)) {
+        } else if (lala == 3) {
             myImageView.setImageResource(R.drawable.octo04);
             profile.setText("Allergies");
         } else {
