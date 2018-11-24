@@ -1,24 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/dashboard"
         android:enabled="true"
-        android:title="Shopping list"
-        app:showAsAction="ifRoom" />
+        android:title="Shopping list" />
     <item
         android:id="@+id/shop_list"
         android:enabled="true"
-        android:title="Shopping list"
-        app:showAsAction="ifRoom" />
+        android:title="Shopping list" />
     <item
         android:id="@+id/statistics"
         android:enabled="true"
-        android:title="Statistics"
-        app:showAsAction="ifRoom" />
+        android:title="Statistics" />
     <item
         android:id="@+id/recipes"
         android:enabled="true"
-        android:title="Recipes"
-        app:showAsAction="ifRoom" />
+        android:title="Recipes" />
 </menu>

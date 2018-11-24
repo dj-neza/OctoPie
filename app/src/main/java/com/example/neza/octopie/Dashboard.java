@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
@@ -61,6 +62,7 @@ public class Dashboard extends AppCompatActivity {
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
 
         toolbar.setTitle("Dashboard");
+        loadFragment(new StoreFragment());
 
     }
 
@@ -73,20 +75,36 @@ public class Dashboard extends AppCompatActivity {
             switch (item.getItemId()) {
                 case R.id.dashboard:
                     toolbar.setTitle("Dashboard");
+                    fragment = new Dashboard();
+                    loadFragment(fragment);
                     return true;
                 case R.id.shop_list:
                     toolbar.setTitle("Shopping list");
+                    fragment = new ShoppingList();
+                    loadFragment(fragment);
                     return true;
                 case R.id.statistics:
                     toolbar.setTitle("Statistics");
+                    fragment = new Statistics();
+                    loadFragment(fragment);
                     return true;
                 case R.id.recipes:
                     toolbar.setTitle("Recipes");
+                    fragment = new Recipes();
+                    loadFragment(fragment);
                     return true;
             }
             return false;
         }
     };
+
+    private void loadFragment(Fragment fragment) {
+        // load fragment
+        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+        transaction.replace(R.id.frame_container, fragment);
+        transaction.addToBackStack(null);
+        transaction.commit();
+    }
 
 
 
