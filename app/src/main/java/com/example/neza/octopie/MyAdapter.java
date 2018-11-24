@@ -29,7 +29,6 @@ public class MyAdapter extends BaseAdapter {
 
             gridView = new View(context);
 
-            // get layout from mobile.xml
             gridView = inflater.inflate(R.layout.octo, null);
 
             // set value into textview

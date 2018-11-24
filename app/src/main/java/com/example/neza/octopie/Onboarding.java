@@ -15,7 +15,7 @@ public class Onboarding extends Activity {
 
     GridView gridView;
     public static final String MY_PREFS_NAME = "MyPref";
-    static final String[] MOBILE_OS = new String[] {
+    static final String[] PROFILES = new String[] {
             "Normal", "Fit","Vegan", "Allergies", "Gluten-free" };
 
     @Override
@@ -27,7 +27,7 @@ public class Onboarding extends Activity {
 
         gridView = (GridView) findViewById(R.id.gridView1);
 
-        gridView.setAdapter(new MyAdapter(this, MOBILE_OS));
+        gridView.setAdapter(new MyAdapter(this, PROFILES));
 
         gridView.setOnItemClickListener(new OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent, View v,
