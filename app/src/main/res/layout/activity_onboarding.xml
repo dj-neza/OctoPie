@@ -5,12 +5,36 @@
     android:layout_height="fill_parent"
     android:orientation="horizontal">
 
-    <fragment
+    <FrameLayout
         android:name="com.example.neza.octopie.NormalFr"
         android:id="@+id/nm_frag"
-        android:layout_weight="1"
-        android:layout_width="0dp"
-        android:layout_height="match_parent" />
+        android:layout_width="fill_parent"
+        android:layout_height="150dp">
+    </FrameLayout>
+
+    <FrameLayout
+        android:name="com.example.neza.octopie.Fit"
+        android:id="@+id/fit_frag"
+        android:layout_width="fill_parent"
+        android:layout_height="150dp"
+        android:layout_alignParentLeft="true" >
+    </FrameLayout>
+
+    <FrameLayout
+        android:name="com.example.neza.octopie.Vegan"
+        android:id="@+id/veg_frag"
+        android:layout_width="fill_parent"
+        android:layout_height="150dp"
+        android:layout_alignParentLeft="true">
+    </FrameLayout>
+
+    <FrameLayout
+        android:name="com.example.neza.octopie.Allergy"
+        android:id="@+id/all_frag"
+        android:layout_width="fill_parent"
+        android:layout_height="150dp"
+        android:layout_alignParentLeft="true">
+    </FrameLayout>
 
 
 </LinearLayout>
