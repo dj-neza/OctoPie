@@ -41,14 +41,16 @@ public class MyAdapter extends BaseAdapter {
             ImageView imageView = (ImageView) gridView
                     .findViewById(R.id.grid_item_image);
 
-            String mobile = octoValues[position];
+            String octo = octoValues[position];
 
-            if (mobile.equals("Fit")) {
+            if (octo.equals("Fit")) {
                 imageView.setImageResource(R.drawable.octo02);
-            } else if (mobile.equals("Vegan")) {
+            } else if (octo.equals("Vegan")) {
                 imageView.setImageResource(R.drawable.octo03);
-            } else {
+            } else if (octo.equals("Allergies")){
                 imageView.setImageResource(R.drawable.octo04);
+            } else if (octo.equals("Gluten-free")) {
+                imageView.setImageResource(R.drawable.octo05);
             }
 
         } else {
