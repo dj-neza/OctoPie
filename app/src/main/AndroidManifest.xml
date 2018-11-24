@@ -21,11 +21,6 @@
         <activity android:name=".ShoppingList" />
         <activity android:name=".Statistics" />
         <activity android:name=".Recipes" />
-        /activity>
-        <activity android:name=".Normal" />
-        <activity android:name=".Fit" />
-        <activity android:name=".Allergy" />
-        <activity android:name=".Vegan"></activity>
     </application>
 
 </manifest>
