@@ -62,7 +62,7 @@ public class Dashboard extends AppCompatActivity {
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
 
         toolbar.setTitle("Dashboard");
-        loadFragment(new StoreFragment());
+        //loadFragment(new StoreFragment());
 
     }
 
